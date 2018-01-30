@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:weightSum="3"
     tools:context="ca.zaher.m.stopwatch.MainActivity">
 
     <TextView
@@ -12,35 +12,40 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/timer_start" />
+        android:text="@string/timer_start"
+        android:textSize="50sp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <!--https://stackoverflow.com/questions/43972393/how-to-make-a-circular-button-->
-        <Button
-            android:id="@+id/btn_lap"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/round_button_accent_color"
-            android:text="@string/lap" />
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
 
         <Button
-            android:id="@+id/btn_pause"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:id="@+id/btnLapReset"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/round_button_red_color"
+            android:text="@string/lap"
+            android:textColor="@color/colorWhit" />
+
+        <Button
+            android:id="@+id/btnStartPause"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
             android:background="@drawable/round_button_gray_color"
-            android:text="@string/pause" />
+            android:text="@string/pause"
+            android:textColor="@color/colorWhit" />
         <!---->
         <ListView
-            android:id="@+id/lv_times"
+            android:id="@+id/lvtimes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btn_pause"
+            android:layout_below="@id/btnStartPause"
             android:paddingTop="10dp" />
     </RelativeLayout>
 
