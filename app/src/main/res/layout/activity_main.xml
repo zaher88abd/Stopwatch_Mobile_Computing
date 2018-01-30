@@ -38,11 +38,11 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
             android:background="@drawable/round_button_gray_color"
-            android:text="@string/pause"
+            android:text="@string/start"
             android:textColor="@color/colorWhit" />
         <!---->
         <ListView
-            android:id="@+id/lvtimes"
+            android:id="@+id/lvLaps"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/btnStartPause"
